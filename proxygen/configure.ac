@@ -209,7 +209,7 @@ if test x"$HAVE_GPERF" != x"yes"; then
    AC_MSG_ERROR([Please install gperf first.])
 fi
 
-LIBS="$LIBS -ldouble-conversion -lpthread -ldl $BOOST_LDFLAGS -lboost_context -lboost_filesystem -lboost_regex -lboost_program_options -lboost_system -lboost_thread"
+LIBS="$LIBS -liberty -lunwind -ldouble-conversion -lpthread -ldl $BOOST_LDFLAGS -lboost_context -lboost_filesystem -lboost_regex -lboost_program_options -lboost_system -lboost_thread"
 
 AM_CONDITIONAL([HAVE_STD_THREAD], [test "$ac_cv_header_features" = "yes"])
 AM_CONDITIONAL([HAVE_X86_64], [test "$build_cpu" = "x86_64"])
